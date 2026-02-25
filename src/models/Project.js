@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/db.js";
 
-const Project = sequelize.define('Project', {
+export const Project = sequelize.define('Project', {
     id: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
@@ -33,4 +33,3 @@ const Project = sequelize.define('Project', {
     }
 });
 
-export default Project;
