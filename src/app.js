@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { testConecction } from './config/db.js';
+import './models/Project.js';
 
 dotenv.config();
 
