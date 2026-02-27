@@ -3,7 +3,9 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { testConecction } from './config/db.js';
 import './models/Project.js';
+import './models/user.js';
 import projectRoutes from './routes/projectRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 
 dotenv.config();
 
@@ -12,6 +14,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/api', projectRoutes);
+app.use('/api/auth', authRoutes);
 
 testConecction();
 
